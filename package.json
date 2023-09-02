@@ -11,6 +11,8 @@
   "dependencies": {
     "@axelar-network/axelar-gmp-sdk-solidity": "^4.0.3",
     "@axelar-network/axelarjs-sdk": "^0.13.5",
+    "@headlessui/react": "^1.7.17",
+    "@openzeppelin/contracts": "^4.9.3",
     "@rainbow-me/rainbowkit": "^1.0.1",
     "@truffle/hdwallet-provider": "^2.1.14",
     "dotenv": "^16.3.1",
