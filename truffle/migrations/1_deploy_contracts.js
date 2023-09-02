@@ -14,12 +14,12 @@ const sampleChallengeDepositAmount = web3.utils.toWei("0.03", "ether"); // 0.03 
 module.exports = function (deployer) {
   // Arguments
   // deployer.deploy(SendMessage, gatewayAddress, gasService);
-  // deployer.deploy(Challenge, sampleChallengeDuration, sampleChallengeDepositAmount);
-  deployer.deploy(ChallengeManager);
+  deployer.deploy(Challenge, sampleChallengeDuration, sampleChallengeDepositAmount);
+  // deployer.deploy(ChallengeManager);
 };
 
 // Linea Goerli contracts:
 // 1. SendMessage: 0xa9500C9F058fe26879932a9F6095398020f6f7EB
-// 2. Challenge: 0x7De141CAe5217b455822A396b40DAdCe01E68b65
+// 2. Challenge: 0x08F07db122a163DbFa2dcA5F6AfC099928D83C91
 // 3. ChallengeManager: 0xB3555A90256f858Cf01C2db4479d23F26A3E92B0
 
