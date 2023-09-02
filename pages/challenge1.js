@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Switch from "react-switch";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import router from "next/router";
 import {
   useContractWrite,
   usePrepareSendTransaction,
@@ -10,18 +9,16 @@ import {
   useWaitForTransaction
 } from "wagmi";
 import { ethers, Contract, providers, utils } from "ethers";
-import Web3Modal from "web3modal";
 
 const CHALLENGE_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_LINEA_CHALLENGE_CONTRACT_ADDRESS;
 const LINEA_RPC_URL = process.env.NEXT_PUBLIC_LINEA_RPC_URL;
 
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import web3 from "web3";
 
 import { RadioGroup, Listbox } from "@headlessui/react";
 import ChallengeContract from "../truffle/build/contracts/Challenge.json";
-import ChallengeManagerContract
-  from "../truffle/build/contracts/ChallengeManager.json";
 
 const tasks = [
   {
@@ -71,18 +68,21 @@ export default function Challenge1() {
   const [joined, setJoined] = useState(false);
   const [allTasksChecked, setAllTasksChecked] = useState(false);
   
+  const sampleChallengeDepositAmount = web3.utils.toWei("0.03", "ether"); // 0.03 ETH
+  
   const { config: startChallengeConfig } = usePrepareContractWrite({
     address: CHALLENGE_CONTRACT_ADDRESS,
     abi: ChallengeContract.abi,
     functionName: "joinChallenge",
-    value: ethers.utils.parseEther("0.03")
+    value: sampleChallengeDepositAmount
   });
+  console.log(ethers.utils.parseEther("0.03"));
   const { write: startChallengeWriteHook } = useContractWrite(
     startChallengeConfig);
   
   const startChallengeWrite = async () => {
     try {
-      await startChallengeWriteHook();
+      await startChallengeWriteHook?.();
       setJoined(true);
     } catch (error) {
       console.error("Error:", error);
