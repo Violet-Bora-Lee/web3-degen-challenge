@@ -16,15 +16,18 @@ export default function Dashboard() {
   const files = [
     {
       source:
-        'linea-challenge.png',
+        'challenge0.png',
+      id: 0,
     },
     {
       source:
-        'optimism-challenge.png',
+        'challenge1.png',
+      id: 1,
     },
     {
       source:
-        'taiko-challenge.png',
+        'challenge2.png',
+      id: 2,
     },
   ]
   
@@ -85,12 +88,12 @@ export default function Dashboard() {
           <h1
             class="max-w-2xl font-display text-2xl font-medium tracking-tight
              text-slate-900 sm:text-4xl text-dark-yellow">
-            Dashboard
+            Ongoing Challenges
           </h1>
           <div class="mt-10 flex justify-center gap-x-6">
             <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
               {files.map((file) => (
-                <li key={file.source} className="relative" onClick={() => router.push('challenge1')}>
+                <li key={file.source} className="relative" onClick={() => router.push(`challenge${file.id}`)}>
                   <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg">
                     <img src={file.source} alt="" className="pointer-events-none object-cover" />
                     <button type="button" className="absolute inset-0 focus:outline-none">
