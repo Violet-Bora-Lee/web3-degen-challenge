@@ -259,7 +259,7 @@ export default function Challenge1() {
           
           </section>
           {/*하단*/}
-          <section className="mt-16 mb-16">
+          <section className={allTasksChecked ? "mt-16 mb-16" : "mt-16 mb-40"}>
             <h1 className="text-2xl font-bold text-white mb-5">
               3 Steps
             </h1>
