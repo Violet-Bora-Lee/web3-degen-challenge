@@ -80,5 +80,5 @@ NEXT_PUBLIC_LINEA_CHALLENGE_MANAGER_CONTRACT_ADDRESS=
 NEXT_PUBLIC_OPTIMISM_RPC_URL=https://optimism-goerli.infura.io/v3/<your-infura-project-id>
 NEXT_PUBLIC_OPTIMISM_NEXT_PUBLIC_OPTIMISM_CONTRACT_ADDRESS=
 ```
-- Run `npm run dev` to start the frontend project
+- Run `yarn dev` to start the frontend project
 
