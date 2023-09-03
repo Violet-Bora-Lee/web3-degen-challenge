@@ -17,11 +17,11 @@ import {
 } from "@axelar-network/axelarjs-sdk";
 import SendMessageContract from "../truffle/build/contracts/SendMessage.json";
 
-const LINEA_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_LINEA_CONTRACT_ADDRESS;
+const LINEA_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_LINEA_SEND_MESSAGE_CONTRACT_ADDRESS;
 const LINEA_RPC_URL = process.env.NEXT_PUBLIC_LINEA_RPC_URL;
 
 const OPTIMISM_CONTRACT_ADDRESS =
-  process.env.NEXT_PUBLIC_OPTIMISM_CONTRACT_ADDRESS;
+  process.env.NEXT_PUBLIC_OPTIMISM_NEXT_PUBLIC_OPTIMISM_CONTRACT_ADDRESS;
 const OPTIMISM_RPC_URL = process.env.NEXT_PUBLIC_OPTIMISM_RPC_URL;
 
 export default function Axelar() {
