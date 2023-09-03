@@ -2,6 +2,8 @@
 
 ## Introduction
 
+- Video: https://www.loom.com/share/2873c2e33ce9479da1d922381b55e976?sid=93dffbad-f218-473a-b563-9de08d4641eb
+
 ## Import Tech Stacks and Contracts
 
 ### Linea
