@@ -15858,12 +15858,12 @@
     "59140": {
       "events": {},
       "links": {},
-      "address": "0x08F07db122a163DbFa2dcA5F6AfC099928D83C91",
-      "transactionHash": "0x3118b2aa5272b0f082fcd0384bb05f9c85ff2bff3b93fc69c3fc5c82ee68da86"
+      "address": "0x7DfF3fED85525948223BeDFc9733b230b9DC8699",
+      "transactionHash": "0x66c81ea2b872fa41b6481d9873757208956ed36daf944116a90f72ac3e144246"
     }
   },
   "schemaVersion": "3.4.15",
-  "updatedAt": "2023-09-02T22:59:43.803Z",
+  "updatedAt": "2023-09-03T02:09:55.951Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

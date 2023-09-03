@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@axelar-network/axelar-gmp-sdk-solidity": "^4.0.3",
+    "@axelar-network/axelar-cgp-solidity": "^4.5.0",
+    "@axelar-network/axelar-gmp-sdk-solidity": "^5.0.0",
     "@axelar-network/axelarjs-sdk": "^0.13.5",
     "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@openzeppelin/contracts": "^4.9.3",
     "@rainbow-me/rainbowkit": "^1.0.1",
     "@truffle/hdwallet-provider": "^2.1.14",
