@@ -19,6 +19,7 @@ import web3 from "web3";
 
 import { RadioGroup, Listbox } from "@headlessui/react";
 import ChallengeContract from "../truffle/build/contracts/Challenge.json";
+import { useRouter } from "next/router";
 
 const tasks = [
   {
@@ -67,6 +68,7 @@ export default function Challenge1() {
   const [showModal, setShowModal] = useState(true);
   const [joined, setJoined] = useState(false);
   const [allTasksChecked, setAllTasksChecked] = useState(false);
+  const router = useRouter();
   
   const sampleChallengeDepositAmount = web3.utils.toWei("0.03", "ether"); // 0.03 ETH
   
@@ -76,7 +78,6 @@ export default function Challenge1() {
     functionName: "joinChallenge",
     value: sampleChallengeDepositAmount
   });
-  console.log(ethers.utils.parseEther("0.03"));
   const { write: startChallengeWriteHook } = useContractWrite(
     startChallengeConfig);
   
@@ -312,7 +313,11 @@ export default function Challenge1() {
           {allTasksChecked &&
             <section className="mt-4 mb-40 flex justify-center items-center">
               <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg">
-                <img src="/challlenge1_success.png" alt="" className="pointer-events-none object-cover mx-auto" />
+                <img
+                  onClick={() => router.push('get-reward')}
+                  src="/challlenge1_success.png"
+                  alt=""
+                  className="pointer-events-none object-cover mx-auto cursor-pointer" />
               </div>
             </section>
           }

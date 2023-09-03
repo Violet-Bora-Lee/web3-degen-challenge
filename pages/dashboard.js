@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import Switch from "react-switch";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import router from "next/router";
+import { useRouter } from "next/router";
 
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Dashboard() {
   const [darkMode, setDarkMode] = useState(true);
+  const router = useRouter();
   
   useEffect(() => {
     const body = document.querySelector("body");
