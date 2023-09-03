@@ -2,6 +2,16 @@
 
 ## Introduction
 
+## Import Tech Stacks and Contracts
+
+### Linea
+- [Linea](https://linea.build/)
+
+### Axelar
+- [Axelar](https://axelar.network/)
+
+> Note: For bounty-related matters, please refer to the [Bounty.md](./Bounty.md) file.
+
 ## How to develop
 Install [nodejs](https://nodejs.org/en/download/). Run `node -v` to check your installation.
 
